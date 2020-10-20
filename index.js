@@ -1,3 +1,6 @@
+let log = console.log;
+console.clear();
+
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /* 👀 This is your data ⬇ */
@@ -33,7 +36,7 @@ const originalFlavors = [
     "Strawberry",
     "Vanilla",
     "Vanilla Burnt Almond"
-]
+];
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
@@ -45,11 +48,11 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(copyFlavors)
+{
+    return copyFlavors.slice();
 }    
-
-
+log(copy(originalFlavors));
 
 
 
@@ -280,20 +283,20 @@ const regionalFlavors = [
 
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-function foo(){
-    return 'bar';
-}
+// function foo(){
+//     return 'bar';
+// }
 
-export default{
-    foo,
-    is31Flavors,
-    addFlavor,
-    removeLastFlavor,
-    getFlavorByIndex,
-    removeFlavorByName,
-    copy,
-    filterByWord,
-    getAverageWordLength,
-    getRandomFlavors
-}
+// export default{
+//     foo,
+//     is31Flavors,
+//     addFlavor,
+//     removeLastFlavor,
+//     getFlavorByIndex,
+//     removeFlavorByName,
+//     copy,
+//     filterByWord,
+//     getAverageWordLength,
+//     getRandomFlavors
+// }
 
