@@ -93,11 +93,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(newFlavor, array){
+function addFlavor(array, newFlavor){
    array.unshift(newFlavor);
    return array;
 }
-log(addFlavor("Rainbow Sherbet", originalFlavors));
+log(addFlavor(originalFlavors, "Rainbow Sherbet"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -176,9 +176,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    const filteredArray = [];
+    for (let i=0;i < array.length; i++){
+        if( array[i].includes(string)) {
+            filteredArray.push(array[i]);
+        }
+    }
+    return filteredArray;
 }
+log(filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
