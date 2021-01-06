@@ -1,4 +1,4 @@
-let log = console.log;
+const log = console.log;
 console.clear();
 
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -67,9 +67,18 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(array){
+   const myArgument = array.length;
+   log(myArgument); 
+    if (myArgument === 31) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
+
+log(is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -84,10 +93,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(newFlavor, array){
+   array.unshift(newFlavor);
+   return array;
 }
-
+log(addFlavor("Rainbow Sherbet", originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -100,9 +110,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(array){
+   let last = array.pop(); 
+   log (last);
+   return (array);
 }
+log(removeLastFlavor(originalFlavors));
 
 
 
@@ -282,21 +295,21 @@ const regionalFlavors = [
 
 
 
-// /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-// function foo(){
-//     return 'bar';
-// }
+/* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
+function foo(){
+    return 'bar';
+}
 
-// export default{
-//     foo,
-//     is31Flavors,
-//     addFlavor,
-//     removeLastFlavor,
-//     getFlavorByIndex,
-//     removeFlavorByName,
-//     copy,
-//     filterByWord,
-//     getAverageWordLength,
-//     getRandomFlavors
-// }
+export default{
+    foo,
+    is31Flavors,
+    addFlavor,
+    removeLastFlavor,
+    getFlavorByIndex,
+    removeFlavorByName,
+    copy,
+    filterByWord,
+    getAverageWordLength,
+    getRandomFlavors
+}
 
